@@ -2,7 +2,6 @@
   <img src="docs/defendagotchi-logo.png" alt="Defendagotchi logo" width="360">
 </p>
 
-<h1 align="center">DEFENDAGOTCHI</h1>
 <p align="center"><i>Cute UI. Serious signals. Raise a cyber‑pet. Unlock Wi‑Fi scans.</i></p>
 
 <p align="center">
@@ -21,7 +20,7 @@ A playful companion for Wi‑Fi hygiene. You level up by caring for the pet. As 
 ## Highlights
 - Touch‑first portrait UI with fast redraws
 - Background monitoring with gentle, throttled alerts
-- **Work Mode (L10)** — pause care and access all scanners
+- **Work Mode (Level 10)** — pause care and access all scanners
 - 13 built‑in themes: Hacker, Vaporwave, Gameboy, and more
 
 ---
