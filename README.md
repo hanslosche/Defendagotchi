@@ -1,88 +1,65 @@
-# 🐼 Defendagotchi
-*A tiny cyber‑pet that levels up by protecting Wi‑Fi.*
+<p align="center">
+  <img src="docs/defendagotchi-logo.png" alt="Defendagotchi logo" width="360">
+</p>
 
-![ESP32](https://img.shields.io/badge/platform-ESP32-black) ![Display](https://img.shields.io/badge/ILI9341-320×240-blue) ![Touch](https://img.shields.io/badge/XPT2046-touch-9cf)
+<h1 align="center">DEFENDAGOTCHI</h1>
+<p align="center"><i>Cute UI. Serious signals. Raise a cyber‑pet. Unlock Wi‑Fi scans.</i></p>
 
-> **Use ethically.** Detection only. Don’t disrupt networks. Only test gear you own or have permission to assess.
-
----
-
-## What is it?
-An ESP32 tamagotchi with a 240×320 ILI9341 touchscreen. Care for the pet (Feed, Pet, Play) to gain XP and unlock **real Wi‑Fi defense abilities**. At level 10, enable **Work Mode** to pause pet care and run all scanners.
-
-**Highlights**
-- Touch UI + optional hardware buttons
-- Background deauth/portal/rogue monitoring
-- Five built‑in scans (2.4 GHz)
-- 13 color themes (Hacker, Vaporwave, Gameboy, etc.)
+<p align="center">
+  <img alt="wifi defense" src="https://img.shields.io/badge/wifi%20defense-active-00f0ff">
+  <img alt="style" src="https://img.shields.io/badge/style-neon%20tamagotchi-ff2cc3">
+  <img alt="license" src="https://img.shields.io/badge/license-MIT-0a0a0a">
+</p>
 
 ---
 
-## Hardware
-- ESP32 (VSPI for TFT; shared SPI for touch)
-- ILI9341 320×240 (SPI) + XPT2046 touch
-- Optional buttons to GND (active‑LOW)
+## What it is
+A playful companion for Wi‑Fi hygiene. You level up by caring for the pet. As it grows you unlock scanners you can run on demand: deauth detector, rogue‑AP check, captive‑portal test, channel crowding, and weak‑encryption report. Fun to use. Useful in the field.
+
+---
+
+## Highlights
+- Touch‑first portrait UI with fast redraws
+- Background monitoring with gentle, throttled alerts
+- **Work Mode (L10)** — pause care and access all scanners
+- 13 built‑in themes: Hacker, Vaporwave, Gameboy, and more
+
+---
+
+## Abilities
+| Lvl | Ability | What it does |
+|---:|---|---|
+| 2 | **Deauth detector** | Counts deauth/disassoc frames while channel hopping. |
+| 4 | **Rogue AP finder** | Flags SSID clones with different BSSIDs. |
+| 6 | **Portal check** | HTTP‑204 test to catch captive portals and redirects. |
+| 8 | **Channel overlap** | Reports the most crowded 2.4 GHz channels. |
+| 10 | **Weak encryption** | Counts Open and WEP APs in view. |
+
+---
+
+## Quick start
+1. Add ESP32 support and install: `Adafruit_GFX`, `Adafruit_ILI9341`, `XPT2046_Touchscreen`, `WiFi`, `HTTPClient`.
+2. Open **Defendagotchi_ESP32_ILI9341_FIXED.ino**. Keep portrait rotation.
+3. Flash. Tap **Feed / Pet / Play / Abilities / Settings**. Toggle **Work Mode** at L10.
 
 **Pins (defaults)**
+```text
+VSPI : SCK=18  MISO=19  MOSI=23
+TFT  : CS=5  DC=2  RST=4        (RST=-1 ⇒ tie to EN)
+TOUCH: CS=15 IRQ=27
+BTN  : Feed=32 Pet=33 Play=25 Abilities=26 Work=21 Settings=13
 ```
-VSPI : SCK=18, MISO=19, MOSI=23
-TFT  : CS=5, DC=2, RST=4   (RST=-1 ⇒ tie to EN)
-TOUCH: CS=15, IRQ=27
-BTN  : Feed=32, Pet=33, Play=25, Abilities=26, Work=21, Settings=13
-```
 
----
-
-## Install
-1. Install **ESP32** board support in Arduino IDE.
-2. Libraries: `Adafruit_GFX`, `Adafruit_ILI9341`, `XPT2046_Touchscreen`, `WiFi`, `HTTPClient`.
-3. Open `Defendagotchi_ESP32_ILI9341_FIXED.ino` and flash.
-
-> Portrait mode is used: `tft.setRotation(0)`, `ts.setRotation(0)`.
-
----
-
-## Use
-- **Main**: tap **Feed / Pet / Play / Abilities / Settings**.  
-- **Abilities**: tap a row to run. **Back** at bottom.  
-- **Settings → Themes**: tap = next, **hold 2s** = select, **double‑tap** = back.  
-- **Work Mode** (Level ≥ 10): toggles from main screen.  
-- **Serial dev keys**: `f,p,l` (care) · `1..5` (abilities) · `a/b/s/w/r` (screens/reset).
-
-**Quick config**
+**Config (optional)**
 ```cpp
-// Focus on your SSID (optional)
-#define HOME_SSID "YourWiFiName"
-
-// Touch alignment
-#define TOUCH_SWAP_XY 1
+#define HOME_SSID "YourWiFiName"  // focus Rogue‑AP checks
+#define TOUCH_SWAP_XY 1           // fix rotated/mirrored touch if needed
 #define TOUCH_FLIP_X  0
 #define TOUCH_FLIP_Y  0
 ```
 
 ---
 
-## Abilities
-| Lvl | Ability | Summary |
-|---:|---|---|
-| 2 | **Deauth detector** | Counts deauth/disassoc frames while channel‑hopping. |
-| 4 | **Rogue AP finder** | Flags SSID clones (same name, different BSSID). |
-| 6 | **Portal check** | HTTP 204 test; detects captive portals/redirects. |
-| 8 | **Channel overlap** | Reports most crowded 2.4 GHz channels. |
-| 10 | **Weak encryption** | Counts Open/WEP APs in view. |
-
----
-
-## Troubleshooting
-- **Touch off / wrong button** → adjust `TOUCH_SWAP_XY`/`TOUCH_FLIP_*`, then fine‑tune `TS_MIN* / TS_MAX*`.  
-- **Blank screen** → verify 3V3/GND and `TFT_CS/DC/RST`.  
-- **“Cross‑wired” buttons** → check pins & `INPUT_PULLUP` wiring to GND; set `DEBUG_BTNS 1`.
-
----
-
-## License
-Choose a license (MIT recommended). PRs welcome.
-
----
-
-**Built with** Adafruit GFX/ILI9341, XPT2046, and the ESP32 stack.
+## Ethics & License
+Detection and education only. Test on networks you own or are authorized to assess.  
+Licensed under **MIT**. PRs welcome.
