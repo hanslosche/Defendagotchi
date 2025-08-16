@@ -58,6 +58,10 @@ BTN  : Feed=32 Pet=33 Play=25 Abilities=26 Work=21 Settings=13
 ```
 
 ---
+## Wiring Diagram
+<img width="1930" height="1200" alt="1" src="https://github.com/user-attachments/assets/196db4f9-7d2d-428c-9f86-fa74b13feffd" />
+<img width="1930" height="1200" alt="2" src="https://github.com/user-attachments/assets/16dc8f1d-f4ce-4668-8fc6-bc53565ef5d8" />
+
 
 ## Ethics & License
 Detection and education only. Test on networks you own or are authorized to assess.  
